@@ -32,9 +32,9 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
     private var tts:TextToSpeech? = null
     private var restTimer:CountDownTimer? =null
     private var restProgress:Int = 0
-    private var restTime: Int = 1
+    private var restTime: Int = 10
     private var adapter:ExerciseStatusAdapter? = null
-    private var exerciseTime:Int = 1
+    private var exerciseTime:Int = 30
     private var exerciseTimer:CountDownTimer? = null
     private var exerciseProgress:Int = 0
     private var player: MediaPlayer? = null
@@ -217,7 +217,7 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
                     speakOut("Congratulations!")
                     finish()
 
-                    val intent:Intent = Intent(this@ExerciseActivity,FinishActivity::class.java)
+                    val intent = Intent(this@ExerciseActivity,FinishActivity::class.java)
                     startActivity(intent)
                 }
             }
